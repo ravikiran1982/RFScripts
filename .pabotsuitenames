@@ -1,0 +1,11 @@
+datasources:afb23f3079651f3a845e531b9917c3c465abfe16
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:f6a8d27b389568d11c3dc34209f1ac6b2148008c
+--suite RobotFramework.Tests.testDemo1
+--suite RobotFramework.Tests.testDemo2
+--suite RobotFramework.Tests.testDemo3
+--suite RobotFramework.Tests.testDemo4
+--suite RobotFramework.Tests.testDemo5
+--suite RobotFramework.Tests.testDemo6
+--suite RobotFramework.Tests.testDemo7

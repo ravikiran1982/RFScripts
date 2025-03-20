@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.2 on win32)" generated="2025-03-02T17:04:36.659847" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\kalla\PycharmProjects\RobotFramework\Tests">
+<suite id="s1-s1" name="testDemo3" source="C:\Users\kalla\PycharmProjects\RobotFramework\Tests\testDemo3.robot">
+<test id="s1-s1-t1" name="Validate Parent/child window functionality" line="6">
+<kw name="Open the browser with rahul shetty academy url" owner="Generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-03-02T17:04:37.078680" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-03-02T17:04:37.078385" elapsed="3.744724"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-03-02T17:04:40.824387" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-02T17:04:40.823741" elapsed="3.101111"/>
+</kw>
+<status status="PASS" start="2025-03-02T17:04:37.077479" elapsed="6.847851"/>
+</kw>
+<kw name="Click the link in parent window to open child window">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-03-02T17:04:43.928181" level="INFO">Clicking link 'xpath://a[contains(text(),'Free Access to InterviewQues/ResumeAssistance/Material')]'.</msg>
+<arg>xpath://a[contains(text(),'Free Access to InterviewQues/ResumeAssistance/Material')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-02T17:04:43.927130" elapsed="0.254826"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-02T17:04:49.185796" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-02T17:04:44.184359" elapsed="5.001693"/>
+</kw>
+<status status="PASS" start="2025-03-02T17:04:43.926058" elapsed="5.260231"/>
+</kw>
+<kw name="Validate the user is switched to child window">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-03-02T17:04:49.187251" elapsed="0.046031"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-02T17:04:49.234026" level="INFO">Verifying element 'xpath://h1[normalize-space()='Documents request']' contains exact text 'DOCUMENTS REQUEST'.</msg>
+<arg>xpath://h1[normalize-space()='Documents request']</arg>
+<arg>DOCUMENTS REQUEST</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-03-02T17:04:49.233590" elapsed="0.071618"/>
+</kw>
+<status status="PASS" start="2025-03-02T17:04:49.186662" elapsed="0.118707"/>
+</kw>
+<kw name="Grab &quot;email&quot; from the child window">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-03-02T17:04:49.376855" level="INFO">${email} = mentor@rahulshettyacademy.com</msg>
+<var>${email}</var>
+<arg>css:a[href='mailto:mentor@rahulshettyacademy.com']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-02T17:04:49.306380" elapsed="0.070603"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-02T17:04:49.378373" level="INFO">mentor@rahulshettyacademy.com</msg>
+<arg>${email}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-02T17:04:49.377509" elapsed="0.000954"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-03-02T17:04:49.379641" level="INFO">${email} = mentor@rahulshettyacademy.com</msg>
+<arg>${email}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-03-02T17:04:49.379108" elapsed="0.000617"/>
+</kw>
+<status status="PASS" start="2025-03-02T17:04:49.305829" elapsed="0.074034"/>
+</kw>
+<kw name="Switch to parent window and enter &quot;email&quot; in username field">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-03-02T17:04:49.382569" elapsed="0.056991"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-03-02T17:04:49.462555" level="INFO">Page title is 'LoginPage Practise | Rahul Shetty Academy'.</msg>
+<arg>LoginPage Practise | Rahul Shetty Academy</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-03-02T17:04:49.439986" elapsed="0.022786"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-02T17:04:49.464861" level="INFO">Typing text 'mentor@rahulshettyacademy.com' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-02T17:04:49.463090" elapsed="0.811253"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-03-02T17:04:50.719867" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="testDemo3_my_screenshot.png"&gt;&lt;img src="testDemo3_my_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>testDemo3_my_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-03-02T17:04:50.274834" elapsed="0.445468"/>
+</kw>
+<status status="PASS" start="2025-03-02T17:04:49.380405" elapsed="1.340180"/>
+</kw>
+<tag>SMOKE</tag>
+<status status="PASS" start="2025-03-02T17:04:37.076191" elapsed="13.644675"/>
+</test>
+<status status="PASS" start="2025-03-02T17:04:36.708259" elapsed="14.014401"/>
+</suite>
+<status status="PASS" start="2025-03-02T17:04:36.690759" elapsed="14.033581"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">SMOKE</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="testDemo3" id="s1-s1" pass="1" fail="0" skip="0">Tests.testDemo3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
